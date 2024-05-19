@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doiet - 동영상 플랫폼</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Static Font -->
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUITE/fonts/static/woff2/SUITE.css" rel="stylesheet">
+    <style>
+        /* 전체 스타일 */
+        body {
+            font-family: 'SUITE', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+
+        /* 헤더 스타일 */
+        header {
+            background-color: #87ceeb;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        header .search-box {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 5px 10px;
+            border-radius: 30px;
+            max-width: 400px;
+            width: 100%;
+        }
+        
+        header .search-box input {
+            border: none;
+            outline: none;
+            padding: 5px;
+            width: 100%;
+        }
+        
+        header .search-box button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: #87ceeb;
+        }
+
+        header .user-actions i {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        /* 메인 컨텐츠 스타일 */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+        
+        .video {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        
+        .video video {
+            width: 100%;
+            height: 500px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        
+        .sidebar {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        
+        .sidebar h3 {
+            margin-top: 0;
+            color: #87ceeb;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sidebar li {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .sidebar a {
+            color: #333;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .sidebar a:hover {
+            background-color: #87ceeb;
+            color: #fff;
+        }
+        
+        .sidebar a i {
+            margin-right: 5px;
+        }
+
+        /* 푸터 스타일 */
+        footer {
+            background-color: #87ceeb;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="bear-logo.png" alt="Doiet 로고">
+            Doiet
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="검색어를 입력하세요">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-actions">
+            <i class="fas fa-upload"></i>
+            <i class="fas fa-th"></i>
+            <i class="fas fa-bell"></i>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="video">
+                <h2>Featured Video</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0Htu5J3A45M" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <!-- 추가 비디오 섹션 -->
+            <div class="video">
+                <h2>다른 영상들</h2>
+                <!-- 여러 개의 영상 섹션 추가 가능 -->
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>카테고리</h3>
+            <ul>
+                <li><a href="#"><i class="fas fa-film"></i>영화</a></li>
+                <li><a href="#"><i class="fas fa-music"></i>음악</a></li>
+                <li><a href="#"><i class="fas fa-gamepad"></i>게임</a></li>
+                <li><a href="#"><i class="fas fa-book"></i>교육</a></li>
+                <li><a href="#"><i class="fas fa-laugh"></i>코미디</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Doiet. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // 추가적인 자바스크립트 기능 구현 가능
+    </script>
+</body>
+</html>
